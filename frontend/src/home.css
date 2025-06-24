@@ -1,0 +1,254 @@
+/* Updated Navbar Styles */
+
+.navbar-logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-center {
+  flex: 1; /* Take all available space */
+}
+
+.navbar-links {
+  margin-left: auto; /* Push to right */
+}
+
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.login-btn, .register-btn {
+  padding: 8px 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-btn {
+  background-color: #f0f0f0;
+}
+
+.login-btn a {
+  text-decoration: none;
+  color: #6a1b9a;
+}
+
+.register-btn {
+  background-color: #bb86fc;
+}
+
+.register-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.register-btn:hover {
+  background-color: #9c47e3;
+}
+
+.login-btn:hover a {
+  color: #4a0072;
+}
+
+/* Optional: Hover effects */
+.navbar-links ul li a:hover {
+  color: #6a1b9a;
+}
+
+.register-btn:hover {
+  background-color: #4a0072;
+}
+
+.login-btn:hover a {
+  color: #4a0072;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 0px 30px 0px; 
+  position: relative;
+  overflow: hidden;
+}
+
+
+.top-tagline {
+  color: #ff6b00;
+  font-weight: 600;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in;
+}
+
+.hero-title .highlight{
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  animation: slideUp 1s ease-in;
+}
+
+.hero-title .highlight {
+  color: #6a1b9a;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #555;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: fadeIn 2s ease-in;
+  overflow: hidden; /* ✅ prevent overflow on hover */
+}
+
+.browse-btn, .how-btn {
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.browse-btn {
+  background-color: #6a1b9a;
+  color: white;
+}
+
+.browse-btn:hover {
+  transform: scale(1.05);
+  background-color: #4a0072;
+}
+
+.how-btn {
+  background-color: white;
+  color: #6a1b9a;
+  border: 2px solid #6a1b9a;
+  overflow: hidden;           /* ✅ prevent internal scroll */
+  white-space: nowrap;        /* ✅ avoid wrapping */
+  text-overflow: ellipsis;
+}
+
+
+.how-btn:hover {
+  transform: scale(1.02);
+  background-color: #f5f5f5;
+}
+
+.floating-logo {
+  position: absolute;
+  width: 40px;
+  opacity: 0.8;
+  animation: float 6s ease-in-out infinite;
+}
+
+.google { top: 20%; left: 20%; }
+.linkedin { top: 20%; right: 25%; }
+.amazon { top: 50%; left: 15%; }
+.twitter { top: 50%; right: 20%; }
+.microsoft { top: 35%; right: 10%; }
+.github { top: 35%; left: 10%; }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.how-it-works-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.how-it-works-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .how-it-works-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.how-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.how-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.how-icon {
+  font-size: 40px;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+.how-step-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.how-step-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
