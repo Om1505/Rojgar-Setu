@@ -57,8 +57,8 @@ input::-webkit-outer-spin-button {
 }
 .outline_btn {
   background: transparent;
-  color: #dfdf07;
-  border: 1px solid #dfdf07;
+  color: #0720df;
+  border: 1px solid #0748df;
 }
 .btn:hover {
   background-color: #ff47ff;
@@ -67,7 +67,7 @@ input::-webkit-outer-spin-button {
   cursor: pointer;
 }
 .outline_btn:hover {
-  background: #dfdf07;
+  background: #12df07;
   color: #111;
   transition: 0.3s;
   cursor: pointer;
@@ -96,7 +96,7 @@ input::-webkit-outer-spin-button {
   color: #dfdf07;
 }
 .navbar .logo img {
-  width: 120px;
+  width: 80px;
 }
 .navbar .links {
   display: flex;
@@ -116,7 +116,7 @@ input::-webkit-outer-spin-button {
   transition: 0.3s;
 }
 .navbar .links ul li a:hover {
-  color: #dfdf07;
+  color: #4fc3f4;
   transition: 0.3s;
 }
 .navbar .links ul:last-child {
@@ -529,8 +529,20 @@ footer div ul a span {
   padding: 20px 20px;
   max-width: 1500px;
 }
+
+.authPage {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  height: 100vh;           /* full height of viewport */
+}
+
 .authPage .login-container {
   max-width: 620px;
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
 }
 .authPage .container .header {
   display: flex;
@@ -586,7 +598,7 @@ footer div ul a span {
 .authPage .container form .inputTag div svg {
   width: 10%;
   font-size: 1.5rem;
-  background: #dfdf07;
+  background: #079bdf;
   height: 46px;
   padding: 8px;
   color: #fff;
@@ -598,21 +610,30 @@ footer div ul a span {
   margin-top: 25px;
   font-weight: 700;
   color: #fff;
-  background: #dfdf07;
+  background: #df07df;
   font-size: 1.2rem;
   border-radius: 7px;
 }
 .authPage .container form a {
   padding: 12px;
   text-align: center;
-  border: 1px solid #dfdf07;
+  border: 1px solid #37c3ed;
   margin-top: 25px;
   font-weight: 700;
-  color: #dfdf07;
+  color: #077edf;
   font-size: 1.2rem;
   text-decoration: none;
   border-radius: 7px;
 }
+
+.ab:hover{
+  background-color: #12df07;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
 .authPage .banner {
   flex: 2;
   display: flex;
@@ -877,7 +898,7 @@ footer div ul a span {
   color: #111;
 }
 .account .component_header p:last-child span {
-  color: #dfdf07;
+  color: #f519c6;
 }
 
 .account .container {
@@ -901,7 +922,7 @@ footer div ul a span {
   gap: 10px;
 }
 .account .container .sidebar .sidebar_links button {
-  color: gray;
+  color: rgb(3, 36, 248);
   text-decoration: none;
   font-weight: 300;
   transition: 0.3s;
@@ -909,7 +930,7 @@ footer div ul a span {
   background: transparent;
 }
 .account .container .sidebar .sidebar_links button:hover {
-  color: #dfdf07;
+  color: #4cb9fc;
   transition: 0.3s;
 }
 .account .container .sidebar .sidebar_links .active {
@@ -939,7 +960,7 @@ footer div ul a span {
 .account_components h3 {
   font-size: 30px;
   font-weight: 600;
-  color: #dfdf07;
+  color: #fe12df;
 }
 .account_components div:first-child {
   font-size: 30px;
@@ -1111,7 +1132,7 @@ footer div ul a span {
   .account .container .showSidebar {
     left: 0;
     transition: 0.3s;
-    background: #111;
+    background: #45ef35;
     height: 100%;
     width: 308px;
     padding: 20px 5px;

@@ -7,12 +7,14 @@ const Hero = () => {
   return (
     <section className="hero">
       {/* Floating Logos */}
+      <div className="logo-wrapper">
       <img src="/google.png" alt="Google" className="floating-logo google" />
       <img src="/linkedin.png" alt="LinkedIn" className="floating-logo linkedin" />
       <img src="/amazon.png" alt="Amazon" className="floating-logo amazon" />
       <img src="/twitter.png" alt="Twitter" className="floating-logo twitter" />
       <img src="/microsoft.png" alt="Microsoft" className="floating-logo microsoft" />
       <img src="/github.png" alt="Github" className="floating-logo github" />
+    </div>
 
       <h1 className="hero-title">
         Search, Apply & <br /> Get Your <span className="highlight">Dream Job</span>

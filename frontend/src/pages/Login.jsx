@@ -69,7 +69,7 @@ const Login = () => {
                                 </div>
                                 </div>
                   <button type='submit' disabled={loading}>Login</button>
-                  <Link to={"/register"}>Register Now</Link>
+                  <Link className='ab' to={"/register"}>Register Now</Link>
               </form>
             </div>
           </section>

@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 50px;
-  background-color: #fff;
+  background-color: #f9f9ce;
   border-bottom: 1px solid #ddd;
 }
 
@@ -169,6 +169,12 @@
   animation: float 6s ease-in-out infinite;
 }
 
+@media (max-width: 1320px) {
+  .logo-wrapper {
+    display: none;
+  }
+}
+
 .google { top: 20%; left: 20%; }
 .linkedin { top: 20%; right: 25%; }
 .amazon { top: 50%; left: 15%; }
@@ -252,3 +258,4 @@
   color: #666;
   line-height: 1.6;
 }
+

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import '../home.css';
+// import '../home.css';
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
@@ -11,10 +11,10 @@ const Navbar = () => {
   return (
     <>
       <nav className={show ? "navbar show_navbar" : "navbar"}>
-        <div className="navbar-logo">
+        <div className="logo">
           <img src="/logo.jpg" alt="logo" />
         </div>
-        <div className="navbar-links">
+        <div className="links">
           <ul>
             <li>
               <Link to="/" onClick={() => setShow(false)}>Home</Link>
