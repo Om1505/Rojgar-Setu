@@ -534,7 +534,7 @@ footer div ul a span {
   display: flex;
   justify-content: center; /* centers horizontally */
   align-items: center;     /* centers vertically */
-  height: 100vh;           /* full height of viewport */
+  /* height: 100vh;            */
 }
 
 .authPage .login-container {
