@@ -91,7 +91,7 @@ const userSlice=createSlice({
 export const register=(data)=>async(dispatch)=>{
     dispatch(userSlice.actions.registerRequest());
     try {
-        const response=await axios.post("http://localhost:4000/api/v1/user/register",data,{
+        const response=await axios.post("https://rojgar-setu-u5mc.onrender.com/api/v1/user/register",data,{
             withCredentials:true,
             headers:{"Content-Type":"multipart/form-data"},
         });
@@ -105,7 +105,7 @@ export const register=(data)=>async(dispatch)=>{
 export const login=(data)=>async (dispatch)=>{
     dispatch(userSlice.actions.loginRequest());
     try {
-        const response=await axios.post("http://localhost:4000/api/v1/user/login",data,{
+        const response=await axios.post("https://rojgar-setu-u5mc.onrender.com/api/v1/user/login",data,{
             withCredentials:true,
             headers:{"content-Type":"application/json"}
         })
@@ -119,7 +119,7 @@ export const login=(data)=>async (dispatch)=>{
 export const getUser=()=>async(dispatch)=>{
     dispatch(userSlice.actions.fetchUserRequest());
     try {
-        const response=await axios.get("http://localhost:4000/api/v1/user/getuser",{
+        const response=await axios.get("https://rojgar-setu-u5mc.onrender.com/api/v1/user/getuser",{
             withCredentials:true,
         })
         dispatch(userSlice.actions.fetchUserSuccess(response.data.user));
@@ -132,7 +132,7 @@ export const getUser=()=>async(dispatch)=>{
 export const logout=()=>async (dispatch)=>{
     try{
         const response=await axios.get(
-            "http://localhost:4000/api/v1/user/logout",
+            "https://rojgar-setu-u5mc.onrender.com/api/v1/user/logout",
             {
                 withCredentials:true,
             }
