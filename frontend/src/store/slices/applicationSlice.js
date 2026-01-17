@@ -82,7 +82,7 @@ const applicationSlice=createSlice({
 export const deleteApplication=(id)=>async(dispatch)=>{
     dispatch(applicationSlice.actions.requestForDeleteApplication());
     try{
-        const response=await axios.delete(`https://rojgar-setu-u5mc.onrender.com/api/v1/application/delete/${id}`,{withCredentials:true})
+        const response=await axios.delete(`${process.env.VITE_BACKEND_URL}/api/v1/application/delete/${id}`,{withCredentials:true})
         dispatch(applicationSlice.actions.successForDeleteApplication(response.data.message))
         dispatch(clearAllApplicationErrors());
     }catch(error){
@@ -93,7 +93,7 @@ export const deleteApplication=(id)=>async(dispatch)=>{
 export const fetchJobSeekerApplications=()=>async(dispatch)=>{
     dispatch(applicationSlice.actions.requestForMyApplications());
         try {
-            const response=await axios.get(`https://rojgar-setu-u5mc.onrender.com/api/v1/application/jobseeker/getall`,{withCredentials:true,});
+            const response=await axios.get(`${process.env.VITE_BACKEND_URL}/api/v1/application/jobseeker/getall`,{withCredentials:true,});
             dispatch(applicationSlice.actions.successForMyApplications(response.data.applications));
             dispatch(applicationSlice.actions.clearAllErrors());
         } catch (error) {
@@ -104,7 +104,7 @@ export const fetchJobSeekerApplications=()=>async(dispatch)=>{
 export const fetchEmployerApplications=()=>async(dispatch)=>{
     dispatch(applicationSlice.actions.requestForAllApplications());
         try {
-            const response=await axios.get(`https://rojgar-setu-u5mc.onrender.com/api/v1/application/employer/getall`,{withCredentials:true,});
+            const response=await axios.get(`${process.env.VITE_BACKEND_URL}/api/v1/application/employer/getall`,{withCredentials:true,});
             dispatch(applicationSlice.actions.successForAllApplications(response.data.applications));
             dispatch(applicationSlice.actions.clearAllErrors());
         } catch (error) {
@@ -115,7 +115,7 @@ export const fetchEmployerApplications=()=>async(dispatch)=>{
 export const postApplication=(data,jobId)=>async(dispatch)=>{
         dispatch(applicationSlice.actions.requestForPostApplication());
         try {
-            const response=await axios.post(`https://rojgar-setu-u5mc.onrender.com/api/v1/application/post/${jobId}`,data,{withCredentials:true,headers:{"Content-Type":"multipart/form-data"}});
+            const response=await axios.post(`${process.env.VITE_BACKEND_URL}/api/v1/application/post/${jobId}`,data,{withCredentials:true,headers:{"Content-Type":"multipart/form-data"}});
             dispatch(applicationSlice.actions.successForPostApplication(response.data.message));
             dispatch(applicationSlice.actions.clearAllErrors());
         } catch (error) {

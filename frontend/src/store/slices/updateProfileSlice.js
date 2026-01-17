@@ -46,7 +46,7 @@ const updateProfileSlice=createSlice({
 export const updateProfile=(data)=>async(dispatch)=>{
     dispatch(updateProfileSlice.actions.updateProfileRequest());
     try{
-        const response=await axios.put("https://rojgar-setu-u5mc.onrender.com/api/v1/user/update/profile",data,{
+        const response=await axios.put(`${process.env.VITE_BACKEND_URL}/api/v1/user/update/profile`,data,{
             withCredentials:true,
             headers:{"Content-Type":"multipart/form-data"},
         })
@@ -59,7 +59,7 @@ export const updateProfile=(data)=>async(dispatch)=>{
 export const updatePassword=(data)=>async(dispatch)=>{
     dispatch(updateProfileSlice.actions.updatePasswordRequest());
     try{
-        const response=await axios.put("https://rojgar-setu-u5mc.onrender.com/api/v1/user/update/password",data,{
+        const response=await axios.put(`${process.env.VITE_BACKEND_URL}/api/v1/user/update/password`,data,{
             withCredentials:true,
             headers:{"Content-Type":"application/json"},
         })
